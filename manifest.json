@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "ChatGPT Scanner",
+    "version": "1.0",
+    "description": "Scan the text in ChatGPT's input field",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "permissions": ["activeTab", "scripting"],
+    "content_scripts": [
+      {
+        "matches": ["*://*.chatgpt.com/*", "*://chat.openai.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
